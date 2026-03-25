@@ -68,7 +68,7 @@ export function BettingStreakProgressModal(props: {
         </div>
 
         <Row className="w-full items-center justify-between">
-          <Row className="items-center gap-1.5 text-sm text-ink-500">
+          <Row className="text-ink-500 items-center gap-1.5 text-sm">
             <span>🧊</span>
             <span>
               {freezes > 0

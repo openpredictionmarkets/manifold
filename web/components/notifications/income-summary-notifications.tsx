@@ -417,21 +417,21 @@ export function BettingStreakFreezeUsedNotification(props: {
       icon={
         <NotificationIcon
           symbol={'🧊'}
-          symbolBackgroundClass={
-            'bg-gradient-to-br from-blue-400 to-cyan-300'
-          }
+          symbolBackgroundClass={'bg-gradient-to-br from-blue-400 to-cyan-300'}
         />
       }
       onClick={() => setOpen(true)}
       subtitle={
         freezesRemaining > 0
-          ? `You have ${freezesRemaining} streak freeze${freezesRemaining === 1 ? '' : 's'} remaining.`
+          ? `You have ${freezesRemaining} streak freeze${
+              freezesRemaining === 1 ? '' : 's'
+            } remaining.`
           : 'You have no streak freezes left — predict today to keep your streak!'
       }
     >
       <span className="line-clamp-3">
-        A <PrimaryNotificationLink text="Streak Freeze" /> was used to save
-        your <span>🔥 {streak} day</span> prediction streak!
+        A <PrimaryNotificationLink text="Streak Freeze" /> was used to save your{' '}
+        <span>🔥 {streak} day</span> prediction streak!
       </span>
       <BettingStreakModal isOpen={open} setOpen={setOpen} currentUser={user} />
     </NotificationFrame>
