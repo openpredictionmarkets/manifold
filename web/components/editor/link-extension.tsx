@@ -26,7 +26,12 @@ export const DisplayLink = TiptapLink.extend({
   renderHTML({ HTMLAttributes }) {
     // Block dangerous protocols (javascript:, data:, vbscript:, etc.)
     const href = HTMLAttributes.href
-    if (href && !/^https?:\/\//i.test(href) && !href.startsWith('/') && !href.startsWith('#')) {
+    if (
+      href &&
+      !/^https?:\/\//i.test(href) &&
+      !href.startsWith('/') &&
+      !href.startsWith('#')
+    ) {
       HTMLAttributes.href = '#'
     }
 
